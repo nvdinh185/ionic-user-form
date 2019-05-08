@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Register form
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form (ngSubmit)="onSubmit()" [formGroup]="myFromGroup">
+    <ion-card col-12 col-xl-4 col-lg-6 col-sm-12>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" formControlName="username"></ion-input>
+      </ion-item>
+      <p *ngIf="myFromGroup.controls.username.invalid && myFromGroup.controls.username.touched">
+          <span class="error">This form is invalid</span>
+        </p>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <p *ngIf="myFromGroup.controls.password.invalid && myFromGroup.controls.password.touched">
+        <span class="error">This form is invalid</span>
+      </p>
+      <ion-row no-padding>
+
+        <ion-col text-right>
+          <ion-buttons start>
+            <button [disabled]="myFromGroup.invalid" ion-button type="submit" icon-end round>
+              Đăng ký
+              <ion-icon name="share-alt"></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-card>
+  </form>
+</ion-content>

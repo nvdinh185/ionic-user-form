@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>shop</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let objHoa of listHoa | async">
+        <ion-card>
+          <h4>Ten hoa: {{ objHoa.ten }}</h4>
+          <img [src]="objHoa.anh" />
+          <p>Gia ban: {{ objHoa.gia }}</p>
+          <button ion-button color="secondary" (click)="Buy(objHoa)">Chọn hoa này</button>
+        </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

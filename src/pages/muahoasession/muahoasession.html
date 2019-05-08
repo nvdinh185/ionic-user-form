@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>muahoasession</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (submit)="onSubmit(muaHoaForm)" #muaHoaForm="ngForm">
+    <ion-item>
+      <ion-label color="primary" stacked>ID</ion-label>
+      <ion-input placeholder="ID" name="id" #txtId="ngModel" ngModel required></ion-input>
+    </ion-item>
+    <span class="error" *ngIf="txtId.touched && txtId?.errors?.required">Yeu cau nhap!</span>
+    <ion-item>
+      <ion-label color="primary" stacked>Ten</ion-label>
+      <ion-input placeholder="Ten" name="ten" #txtTen="ngModel" ngModel required></ion-input>
+    </ion-item>
+    <span class="error" *ngIf="txtTen.touched && txtTen?.errors?.required">Yeu cau nhap!</span>
+    <ion-item>
+      <ion-label color="primary" stacked>So Luong</ion-label>
+      <ion-input placeholder="So Luong" name="soluong" #txtSoLuong="ngModel" ngModel required></ion-input>
+    </ion-item>
+    <span class="error" *ngIf="txtSoLuong.touched && txtSoLuong?.errors?.required">Yeu cau nhap!</span>
+    <ion-item>
+      <ion-label color="primary" stacked>Gia</ion-label>
+      <ion-input placeholder="Gia" name="gia" #txtGia="ngModel" ngModel required></ion-input>
+    </ion-item>
+    <span class="error" *ngIf="txtGia.touched && txtGia?.errors?.required">Yeu cau nhap!</span>
+    <ion-item>
+      <ion-input [disabled]="muaHoaForm.invalid" type="submit" value="Mua hoa"></ion-input>
+    </ion-item>
+  </form>
+  <button ion-button (click)="xemDanhSach()">Xem danh sach hoa</button>
+</ion-content>

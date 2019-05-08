@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>buyout</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <img [src]="hoa.anh" [alt]="hoa.anh" id="hoa-detail">
+    <h2>Ten hoa: {{ hoa.ten }}</h2>
+    <p>Gia ban: {{ hoa.gia }}</p>
+    <button ion-button color="secondary" (click)="muaHoa(hoa)">Mua</button>
+    <button ion-button color="danger" (click)="goHome()">Tro ve trang chu</button>
+
+</ion-content>

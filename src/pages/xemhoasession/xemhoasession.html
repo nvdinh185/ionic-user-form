@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>xemhoasession</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let hoa of listHoa">
+    <ion-card-header>
+      Ten: {{hoa.ten}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        So luong: {{ hoa.soluong }}
+      </ion-item>
+      <ion-item>
+        Gia ban: {{ hoa.gia }}
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

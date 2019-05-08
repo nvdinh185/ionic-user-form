@@ -1,0 +1,11 @@
+ion-card {
+  text-align: center;
+}
+ion-input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+.error{
+  color:red;
+  font-weight: bold;
+  font-style: italic;
+}
